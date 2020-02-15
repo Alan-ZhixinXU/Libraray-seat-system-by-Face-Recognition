@@ -11,4 +11,6 @@ This system contains 3 parts, and some additional functions.
 2.1  matplotlib installation: when install it, it is easy to offline : “Read time out”, so we need adjust the offline time as 1000,
      namely : 【pip --default-timeout=100 install -U matplotlib///任意包】
 
-2.2  
+2.2  JSON : 
+     After completed the matplotlib, we find A type error 'TypeError: Object of type bytes is not JSON serializable', so we could do this:
+     namely: 
