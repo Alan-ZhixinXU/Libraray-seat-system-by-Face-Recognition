@@ -1,0 +1,98 @@
+# After facial recognition and bio-assay, students could personalised theirs seats.
+
+print('Welcome to the Library seating system')
+print('Do you need a personalised recommendation?')
+print('Please select "YES"  or  "NO")
+a = input()
+
+# when students choose'YES '， means they are inclined to have more options.
+if a =='YES':
+  import openpyxl
+  wa = openyxl.load_workbook('Personal Preference.xlsx')
+  wc = wa['Sheet1']
+  row = str(wc.max_row+1)
+ 
+ print ('1. What kind of subjects are you prefer? Please input categories i.g. Economy, Law, Computer)
+ b = input()
+ wc['B' + str(row)] =b
+ 
+ print('2. Would you like to sit at the side of windows ?']
+ c = input()
+ if c == 'YES'
+    qq = 'Near the windows'
+  
+ else:
+    qq = 'Far away from the windows'
+  
+  print('3. Do you need the outlets ？')
+  if d = 'YES'
+      ww = 'offer the electricity power'
+  
+  else:
+      ww = 'No electricity power'
+  
+result[b] = result.pop('k')
+result[qq] = result.pop('x')
+result[ww] = result.pop('c')
+
+#Set two new variables,'wb' for 'remaining seats'; 'wp' for 'Sheet1'
+wb = openpyxl.load_workbook('Remaining seats.xlsx')
+wp = wb['Sheet1']
+for rowNum in range(2, wp.max_row):
+    g = wp.cell(row = rowNum.column=2).value
+    if g in result:
+        g = result[b]
+    else:
+        t = b
+        g = 0
+    h = w wp.cell(row = rowNum.column=3).value
+    if h in result:
+        h = result[qq]
+    else:
+        t = qq
+        g = 0
+    j = w wp.cell(row = rowNum.column=4).value
+    if j in result:
+        j = result[qq]
+    else:
+        t = ww
+        g = 0
+        
+o = g + h + j
+if o == 3:
+    print('According to your choice, the ' + str() + 'are recommended to you.'
+if o == 2:
+    print('According to your choice, the ' + str() + 'are recommended to you.'
+if o == 1:
+    print('According to your choice, the ' + str() + 'are recommended to you.'    
+print('Please select the seat you want')
+
+f = str(input())
+print('You have successfully selected this seat' + f)
+
+i = {f:'(The seat you want has been selected, please select other seats)'}
+for rowNum in range(2,wp.max_row)
+    Seats_number = wp.cell(row = rowNum,column = 1).value
+    if Seats_number in i:
+    wp.cell ( row = rowNum, column = 6).value = i[Seats_number]
+
+wa.save('Personal Preference.xlsx')
+wb.save('Remaining seats.xlsx)
+    else:
+    wb = openyx.load_workbook('Remaining seats.xlsx')
+    ws = wb['Sheet1']
+    for each_moive in ws]'A1 : F10']:
+        for each_cell in each_moive:
+            print(each_cell.value, end = '']
+        print('\n')
+    
+    print('\n')
+print('Please select the seat you want')
+f = str(input())
+print('You have successfully selected this seat' + f)
+for rowNum in range(2,ws.max_row)
+    Seats_number = ws.cell(row = rowNum,column = 1).value
+    if Seats_number in i:
+    ws.cell ( row = rowNum, column = 6).value = i[Seats_number]
+    
+wb.save('Remaining Seats.xlsx)
