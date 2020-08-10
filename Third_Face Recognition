@@ -1,0 +1,41 @@
+第二部分成功获取了API 和Baidu-aip库使用权限，接下来联网使用ID，进行运算
+
+from aip import AipFace
+#输入获得的APPID，AK和SK
+APP_ID = aaaaaaa
+API_KEY = bbbbbbbbbbbbbb
+SECRET_KEY = ccccccccccccccccccccccccc
+
+client = AipFace(APP_ID, API_KEY, SCERET_KEY)
+
+
+#将First 拍摄的图片转码
+import base 64
+filePath = 'xxx.jpg'
+  #b644encode 是编码
+  base64_data = base64.b64encode(x.read))
+image = str(base64_data, 'utf-8')
+imageType = 'BASE64'
+
+#从百度云AIP 的组中提取必要参数:
+  1）将拍照获取的照片与学生原有上传照片进行对比
+  2）对图片质量不做要求；
+  3）活体检测:程度较低；
+  4）最大识别一个人数。
+groupIdList = 'some_students, actor'
+'选择合适的参数'
+options = {}
+options['quality-control'] = 'NONE'
+options['liveness-control'] = 'low'
+options['max_user_num'] = 1
+
+#输出结果
+result = client.search(image, imageType, groupIdList,options)
+pprint.pprint(result)
+#pprint 是一种可以整齐输出的方式，方便阅读
+pprint.pformat(result)
+fileobj = open('result.py', 'w')
+#调用文件，导出result.py 程序，方便保存
+fileobj.write ('result = ' + pprint.pformat(result) + '\n')
+fileobj.close()
+
