@@ -1,18 +1,18 @@
-注册百度云AI，新建应用（name = 图书馆人脸数据库），获取 图书馆人脸数据库 应用的相应APPID，API Key，Secret Key。
-  在 图书馆人脸识别数据库 应用中新建组别，命名为 some_students。
-  名字缩写，对应照片。
+#注册百度云AI，新建应用（name = 图书馆人脸数据库），获取 图书馆人脸数据库 应用的相应APPID，API Key，Secret Key。
+#在"图书馆人脸识别数据库"应用中新建组别，命名为 "some_students"。
+#使用名字缩写，对应照片。
 
-安装百度-aip
+#安装百度-aip
 pip install baidu-aip
 
-调用接口，需获得access_token码：
-https://aip.baidubce.com/oauth/2.0/token 发送请求（推荐使用post），并附带下列参数：
-  grant_type 固定为 client_credentials;
-  client_id  为应用的API Key；
-  client_secret  为应用的Secret Key；
+#调用接口，需获得access_token码：
+#https://aip.baidubce.com/oauth/2.0/token 发送请求（推荐使用post），并附带下列参数：
+#  grant_type 固定为 client_credentials;
+#  client_id  为应用的API Key；
+#  client_secret  为应用的Secret Key；
 
-打开access_token 文件
-输入获取access_token的代码：
+#打开access_token 文件
+#输入获取access_token的代码：
 import urllib, urllib.request, sys
 import ssl
 # cilent_id 为官网获取的AK，client_secret为官网获取的Sk
@@ -24,9 +24,9 @@ content = response.read()
 if(content):
   print(content)
 
-将此文件（access_token）保存,client_id, client_secret分别为API_KEY,SECRET_KEY。 
-向baidu_aip申请，从而获得返回的access_token
-运行结果如下：
+#将此文件（access_token）保存,client_id, client_secret分别为API_KEY,SECRET_KEY。 
+#向baidu_aip申请，从而获得返回的access_token
+#运行结果如下：
 'access_token':'24.2b5a19d992f2deb090a6e724d1c7fbe2.2592000.1547349664.282335-15131549'.
 'expires_in':'2592000'
 expires 指运行结果于2592000秒（一个月内）有效，过期需重新运行此（access_loken）文件。
