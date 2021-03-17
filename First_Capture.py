@@ -1,3 +1,5 @@
+#The first step is to call the camera of computer, take one picture and save it.
+
 import cv2
 capture = cv2.VideoCapture(0)
 while True:
@@ -17,5 +19,6 @@ while True:
     
 capture.release()
 
+# Sava it and wait for the second step.
 
 
